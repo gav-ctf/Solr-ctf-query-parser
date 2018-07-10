@@ -1,5 +1,10 @@
 # Solr-ctf-query-parser
-Ranks and expands Solr query returns using clickstream data. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
+Ranks and expands Solr query returns using clickstream data
+
+ABOUT:
+-----
+
+CTF modifies query returns to reflect click traffic. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
 
 The filter samples click data for items returned by a query and uses it to
 
@@ -81,19 +86,19 @@ PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (SEE ATTACHED SOLRCONFIG.XML
 
 <tr><td>ctf parameters:</td><td></td><td></td></tr>
 <tr><td></td><td>	base</td><td>		get primary (1y) items from best query matches or most clicked items (<String> matches or clicks)</td></tr>
-<tr><td></td><td>	restrict</td><td>	show only items with click boosts (<String> true or false)</td></tr>
-<tr><td></td><td>	reorder</td><td>		allow click boosts to effect score and sort (<String> true or false)</td></tr>
-<tr><td></td><td>	extend</td><td> 		include secondary (2y) items (<String> true or false)</td></tr>
-<tr><td></td><td>	only2y</td><td>		show only 2y items (<String> true or false)</td></tr>
-<tr><td></td><td>	cn</td><td> 		number of 1y items to sample (<int>)</td></tr>
-<tr><td></td><td>	cd</td><td> 		average clicks per 1y item (<double>), controls click sample period</td></tr>
-<tr><td></td><td>	cp</td><td>		time integration (<int> num clicks >0), low values = responsive, high = stable</td></tr>
-<tr><td></td><td>	cb</td><td> 		click boost = cb.(fn clicks)^cx (<double> cb values >0)</td></tr>
-<tr><td></td><td>	cx</td><td> 		click boost = cb.(fn clicks)^cx (<double> cx values >0)</td></tr>
-<tr><td></td><td>	ctp</td><td> 		click traffic type for 1y items - a filter query on click traffic (<String> use ctp="*" for any, ctp="user_type:2", ctp="userID:xxxx", ctp="time_stamp:[NOW-7DAY TO NOW]" or ctp="some function query" etc)</td></tr>
-<tr><td></td><td>	cts</td><td>		click traffic type for 2y items - a filter query on click traffic (<String> as ctp)</td></tr>
-<tr><td></td><td>	cs</td><td>	 	proportion of 2y items to allow through, lowest & oldest traffic removed first (<double> value 0 to 1)</td></tr>
-<tr><td></td><td>	cf</td><td>		2y item type - a filter query on 2y items (<String> use cf="*" for any, cf="cat:2", cf="-doc_type:pdf", cf="published:[NOW-31DAY TO NOW]", cf="some function query" etc)</td></tr>
-<tr><td></td><td>	cy</td><td>		position 2y items in list (<double> value between 0 (next to parent) and 1 (own click boost))</td></tr>
-<tr><td></td><td>	cz</td><td>		lookback parameter for observing past query returns at a certain time (<Solr date> use cz="NOW" or e.g. cz="NOW-7DAY" or cz="2015-07-14T11:32:00Z")</td></tr>
+<tr><td></td><td>	restrict</td><td>	show only items with click boosts (String true or false)</td></tr>
+<tr><td></td><td>	reorder</td><td>		allow click boosts to effect score and sort (String true or false)</td></tr>
+<tr><td></td><td>	extend</td><td> 		include secondary (2y) items (String true or false)</td></tr>
+<tr><td></td><td>	only2y</td><td>		show only 2y items (String true or false)</td></tr>
+<tr><td></td><td>	cn</td><td> 		number of 1y items to sample (int)</td></tr>
+<tr><td></td><td>	cd</td><td> 		average clicks per 1y item (double), controls click sample period</td></tr>
+<tr><td></td><td>	cp</td><td>		time integration (int num clicks >0), low values = responsive, high = stable</td></tr>
+<tr><td></td><td>	cb</td><td> 		click boost = cb.(fn clicks)^cx (double cb values >0)</td></tr>
+<tr><td></td><td>	cx</td><td> 		click boost = cb.(fn clicks)^cx (double cx values >0)</td></tr>
+<tr><td></td><td>	ctp</td><td> 		click traffic type for 1y items - a filter query on click traffic (String use ctp="*" for any, ctp="user_type:2", ctp="userID:xxxx", ctp="time_stamp:[NOW-7DAY TO NOW]" or ctp="some function query" etc)</td></tr>
+<tr><td></td><td>	cts</td><td>		click traffic type for 2y items - a filter query on click traffic (String as ctp)</td></tr>
+<tr><td></td><td>	cs</td><td>	 	proportion of 2y items to allow through, lowest & oldest traffic removed first (double value 0 to 1)</td></tr>
+<tr><td></td><td>	cf</td><td>		2y item type - a filter query on 2y items (String use cf="*" for any, cf="cat:2", cf="-doc_type:pdf", cf="published:[NOW-31DAY TO NOW]", cf="some function query" etc)</td></tr>
+<tr><td></td><td>	cy</td><td>		position 2y items in list (double value between 0 (next to parent) and 1 (own click boost))</td></tr>
+<tr><td></td><td>	cz</td><td>		lookback parameter for observing past query returns at a certain time (Solr date use cz="NOW" or e.g. cz="NOW-7DAY" or cz="2015-07-14T11:32:00Z")</td></tr>
 </table>

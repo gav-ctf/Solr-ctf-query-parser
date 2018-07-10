@@ -2,7 +2,6 @@
 
 /**
  * Document scorer using click data from queries in ctfBse, stored in ctfDataHandler.
- * Not for distribution
  * @author Gavin Ruddy
  * contact gav@pontneo.com
  * @version 1.0.1 2015/8/01

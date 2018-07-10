@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="example clicks core" version="1.1">
+
+ <fields>
+    <field name="time_stamp" type="date" indexed="true" stored="true" required="true" />
+    <field name="fromDocID" type="int" indexed="true" stored="true" required="true" />
+    <field name="toDocID" type="int" indexed="true" stored="true" required="true" />
+    <field name="qstr" type="text_general" indexed="true" stored="true" />
+    <field name="parser_type" type="text_general" indexed="true" stored="true" />
+    <field name="userID" type="int" indexed="true" stored="true" />
+    <field name="user_interests" type="text_general" indexed="true" stored="true" multiValued="true"/>
+    <field name="to_doc_category" type="int" indexed="true" stored="true" />
+    <field name="to_click_posn" type="int" indexed="true" stored="true" />
+    <field name="_version_" type="long" indexed="true" stored ="true"/>
+ </fields>
+
+ <defaultSearchField>toID</defaultSearchField>
+
+ <types>
+    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" />
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" />
+    <fieldType name="date" class="solr.TrieDateField" omitNorms="true"/>
+ </types>
+
+</schema>

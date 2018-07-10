@@ -2,7 +2,6 @@
 
 /**
  * Queries for 1y items from top text matches, time integration, clicks and 2y items, then sends data to ctfDataHandler.
- * Not for distribution
  * @author Gavin Ruddy
  * contact gav@pontneo.com
  * @version 1.1.0 2016/01/29

@@ -64,7 +64,7 @@ REQUIREMENTS:
 <tr><td></td><td>	other fields (such as userID, usertype, user_interests, to_posn_in_list, user_query etc) are not required but are of course part of the point of using this plugin (see example queries above)</td></tr>
 </table>
 
-PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (see attched solrconfig.xml):
+PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (see attached solrconfig.xml):
 --------------------------------------------------------------------------------------
 <table>
 <tr><td>ctf settings:</td><td></td><td></td></tr>

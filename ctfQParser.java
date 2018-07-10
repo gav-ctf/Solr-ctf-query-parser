@@ -2,7 +2,6 @@
 
 /**
  * Calls preparatory queries in ctfBase or ctfClickBase, adds 2y items to query string, parses query & calls ctfScorer.
- * Not for distribution
  * @author Gavin Ruddy
  * contact gav@pontneo.com
  * @version 1.0.1 2015/8/01

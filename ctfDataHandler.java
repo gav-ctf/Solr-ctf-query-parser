@@ -2,7 +2,6 @@
 
 /**
  * Stores and handles data from ctfBase for use in ctfQParser and ctfOutput.
- * Not for distribution
  * @author Gavin Ruddy
  * contact gav@pontneo.com
  * @version 1.1.0 2016/01/29

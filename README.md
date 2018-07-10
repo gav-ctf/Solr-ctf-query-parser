@@ -1,10 +1,5 @@
 # Solr-ctf-query-parser
-Ranks and expands Solr query returns using clickstream data
-
-ABOUT:
------
-
-CTF modifies query returns to reflect click traffic. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
+Ranks and expands Solr query returns using clickstream data. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
 
 The filter samples click data for items returned by a query and uses it to
 
@@ -85,7 +80,7 @@ PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (SEE ATTACHED SOLRCONFIG.XML
 <tr><td></td><td>	click_time_stamp_field_name</td><td> 	clicks core timestamp field name</td></tr>
 
 <tr><td>ctf parameters:</td><td></td><td></td></tr>
-<tr><td></td><td>	base</td><td>		get primary (1y) items from best query matches or most clicked items (<String> matches or clicks)</td></tr>
+<tr><td></td><td>	base</td><td>		get primary (1y) items from best query matches or most clicked items (String matches or clicks)</td></tr>
 <tr><td></td><td>	restrict</td><td>	show only items with click boosts (String true or false)</td></tr>
 <tr><td></td><td>	reorder</td><td>		allow click boosts to effect score and sort (String true or false)</td></tr>
 <tr><td></td><td>	extend</td><td> 		include secondary (2y) items (String true or false)</td></tr>

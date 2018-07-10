@@ -2,7 +2,6 @@
 
 /**
  * Calculates and outputs query metrics from ctfBase, ctfScorer and ctfQParser.
- * Not for distribution
  * @author Gavin Ruddy
  * contact gav@pontneo.com
  * @version 1.0.1 2015/8/01

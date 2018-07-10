@@ -1,0 +1,62 @@
+<!-- CLICK THROUGH FILTER (CTF) PLUGIN -->
+
+<!-- Location of CTF jar file -->
+
+<lib dir="." regex="clickthroughfilter-\d.*\.jar" />
+
+<!-- Add {!ctf v=$qq} to q, and "dereference" your basic query to qq parameter.
+   Set up defaults in ctf <queryParser/> section below.
+   Override default parameters by setting them as localparams in your query
+	e.g. {!ctf cn=5 cb=3 extend=false} or ...&cn=5&cb=3&extend=false on url
+   See README.MD for details
+-->
+
+<queryParser name="ctf" class="com.ctf.ctfQParser">
+   <!-- ctf settings -->
+	<str name="solr_host_url">http://localhost:8983/solr</str>
+	<str name="document_core_to_query">documents</str>
+	<str name="clicks_core_to_query">clicks</str>
+   <!-- ctf mappings -->
+	<str name="document_ID_field_name">docID</str>
+	<str name="click_fromID_field_name">fromDocID</str>
+	<str name="click_null_fromID_value">-1</str>
+	<str name="click_toID_field_name">toDocID</str>
+	<str name="click_time_stamp_field_name">time_stamp</str>
+   <!-- ctf parameter defaults -->
+	<str name="base">matches</str>
+	<str name="restrict">false</str>
+	<str name="reorder">true</str>
+	<str name="extend">true</str>
+	<str name="only2y">false</str>
+	<str name="cn">10</str>
+	<str name="cd">10</str>
+	<str name="cp">20</str>
+	<str name="cb">2</str>
+	<str name="cx">2</str>
+	<str name="ctp">*</str>
+	<str name="cts">*</str>
+	<str name="cs">0.5</str>
+	<str name="cf">*</str>
+	<str name="cy">0.5</str>
+	<str name="cz">NOW</str>
+</queryParser>
+
+<!-- For tuning, query debug, improvement metrics etc, 
+	use "/ctf" request handler & insert {!ctf [+ any parameter=value pairs you like]} in your query
+	for testing, inserting {!cache=false} at start of q can be helpful 
+	check debug to ensure your query is being parsed & scored properly -->
+
+<searchComponent name="ctfOutput" class="com.ctf.ctfOutput"/>
+<requestHandler name="/ctf" class="solr.SearchHandler">
+	<lst name="defaults">
+		<str name="echoParams">all</str>
+		<str name="fl">id name score</str> //score is required for metrics to work
+		<str name="sort">score desc</str>
+		<str name="improvements">on</str>  //required for metrics to work
+	</lst>
+    <arr name="last-components">
+      <str>ctfOutput</str>
+    </arr>
+</requestHandler>
+
+<!-- END OF CLICK THROUGH FILTER PLUGIN -->

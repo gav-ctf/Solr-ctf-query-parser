@@ -2,7 +2,6 @@
 
 /**
  * Queries for 1y items from most clicked items, time integration, clicks and 2y items, then sends data to ctfDataHandler.
- * Not for distribution
  * @author Gavin Ruddy
  * contact gav@pontneo.com
  * @version 1.0.1 2015/8/01

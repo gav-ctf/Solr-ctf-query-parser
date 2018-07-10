@@ -1,5 +1,5 @@
 # Solr-ctf-query-parser
-Ranks and expands Solr query returns using clickstream data. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
+Reranks and expands Solr query returns using clickstream data. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
 
 The filter samples click data for items returned by a query and uses it to
 
@@ -64,7 +64,7 @@ REQUIREMENTS:
 <tr><td></td><td>	other fields (such as userID, usertype, user_interests, to_posn_in_list, user_query etc) are not required but are of course part of the point of using this plugin (see example queries above)</td></tr>
 </table>
 
-PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (SEE ATTACHED SOLRCONFIG.XML):
+PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (see attched solrconfig.xml):
 --------------------------------------------------------------------------------------
 <table>
 <tr><td>ctf settings:</td><td></td><td></td></tr>

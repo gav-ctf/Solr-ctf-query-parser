@@ -57,7 +57,6 @@ public class ctfDataHandler {
   private static Double cy;
   private static String testString = "";
   private static int totalDocs = 0;
-
   private static String DOCID;
   private static String FROMID;
   private static String TOID;

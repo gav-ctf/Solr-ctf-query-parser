@@ -58,6 +58,5 @@ public class ctfScorer extends CustomScoreQuery {
       dh.addDocScore(docID,score);
       return score;
     }
-
   }
 }

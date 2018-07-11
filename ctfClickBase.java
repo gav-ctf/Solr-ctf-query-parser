@@ -255,7 +255,6 @@ public class ctfClickBase {
     } catch (SolrServerException ex) {
       throw new RuntimeException("Problem with SolrQuery connection",ex);
     }
-
     return dh.getPrimaryObj();
   }
 

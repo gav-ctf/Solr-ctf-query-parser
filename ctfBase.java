@@ -113,7 +113,6 @@ public class ctfBase {
         dh.addPrimaryObj(docID);
         dh.addInitDocScores(docID,score);
       }
-
       } catch (IOException ex) {
         //
       } catch (SolrServerException ex) {
@@ -315,7 +314,6 @@ public class ctfBase {
         String docID = (doc.getFirstValue(dh.getDOCID())).toString();
         dh.addSecondaryObj(docID);
       }
-
       } catch (IOException ex) {
         //
       } catch (SolrServerException ex) {

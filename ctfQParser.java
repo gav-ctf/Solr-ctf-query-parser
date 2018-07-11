@@ -109,4 +109,5 @@ public class ctfQParser extends QParserPlugin {
         return new ctfScorer(innerQuery);
     }
   }
+
 }

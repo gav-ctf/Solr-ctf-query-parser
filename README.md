@@ -1,5 +1,5 @@
 # Solr-ctf-query-parser
-Reranks and expands Solr query returns using clickstream data. Clickthroughfilter.jar runs the filter as a query parser plugin for Solr/Lucene.
+Reranks and expands Solr query returns using clickstream data. Clickthroughfilter-x.x.x.jar runs the filter as a query parser plugin for Solr/Lucene.
 
 The filter samples click data for items returned by a query and uses it to
 
@@ -92,6 +92,7 @@ PARAMETERS IN SOLRCONFIG.XML AND FOR USE IN QUERIES (see attached solrconfig.xml
 <tr><td></td><td>	cx</td><td> 		click boost = cb.(fn clicks)^cx (double cx values >0)</td></tr>
 <tr><td></td><td>	ctp</td><td> 		click traffic type for 1y items - a filter query on click traffic (String use ctp="*" for any, ctp="user_type:2", ctp="userID:xxxx", ctp="time_stamp:[NOW-7DAY TO NOW]" or ctp="some function query" etc)</td></tr>
 <tr><td></td><td>	cts</td><td>		click traffic type for 2y items - a filter query on click traffic (String as ctp)</td></tr>
+<tr><td></td><td>	cg</td><td>	 	skews 2y scores from popular to specific (double value 0 to 1)</td></tr>
 <tr><td></td><td>	cs</td><td>	 	proportion of 2y items to allow through, lowest & oldest traffic removed first (double value 0 to 1)</td></tr>
 <tr><td></td><td>	cf</td><td>		2y item type - a filter query on 2y items (String use cf="*" for any, cf="cat:2", cf="-doc_type:pdf", cf="published:[NOW-31DAY TO NOW]", cf="some function query" etc)</td></tr>
 <tr><td></td><td>	cy</td><td>		position 2y items in list (double value between 0 (next to parent) and 1 (own click boost))</td></tr>

@@ -23,4 +23,4 @@
     <fieldType name="date" class="solr.TrieDateField" omitNorms="true"/>
  </types>
 
-</schema>
+</schema> 

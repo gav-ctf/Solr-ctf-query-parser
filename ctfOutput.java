@@ -95,7 +95,6 @@ public class ctfOutput extends SearchComponent {
         qresults.add("net improvement (%)", impc );
         rb.rsp.add("CTF output", qresults);
         rb.rsp.add("item details", response);
-
     }
 
     public static void getImprovements(Map<String, Float> map) {

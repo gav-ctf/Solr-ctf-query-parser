@@ -1,3 +1,5 @@
+<!-- COPY THIS INTO YOUR SOLCONFIG.XML -->
+
 <!-- CLICK THROUGH FILTER (CTF) PLUGIN -->
 
 <!-- Location of CTF jar file -->
@@ -35,6 +37,7 @@
 	<str name="cx">2</str>
 	<str name="ctp">*</str>
 	<str name="cts">*</str>
+	<str name="cg">0</str>
 	<str name="cs">0.5</str>
 	<str name="cf">*</str>
 	<str name="cy">0.5</str>

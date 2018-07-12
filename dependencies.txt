@@ -1,0 +1,10 @@
+
+Dependencies for comiling the java.
+
+..\..\..\dist\solrj-lib\slf4j-api-1.7.7.jar;
+..\..\..\dist\solr-core-6.4.0.jar;
+..\..\..\dist\solr-solrj-6.4.0.jar;
+..\..\..\dist\lucene-core-6.4.0.jar;
+..\..\..\dist\lucene-analyzers-common-6.4.0.jar;
+..\..\..\dist\lucene-queries-6.4.0.jar;
+..\..\..\dist\lucene-queryparser-6.4.0.jar;

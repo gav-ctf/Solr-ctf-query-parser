@@ -1,5 +1,5 @@
 
-Dependencies for comiling the java.
+Dependencies for compiling the java.
 
 ..\..\..\dist\solrj-lib\slf4j-api-1.7.7.jar;
 ..\..\..\dist\solr-core-6.4.0.jar;

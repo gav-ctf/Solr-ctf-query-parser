@@ -17,7 +17,7 @@ For the most part, the filter can be built straight into many types of complex q
 
 A "/ctf" request handler is provided to help with testing and tuning (see attached solrconfig.xml). This quantifies primary and secondary improvements relative to the unmodified return and provides other useful metrics.
 
-For more detail about the CTF process go to https://www.slideshare.net/pontneo/better-search-implementation-of-click-through-filter-as-a-query-parser-plugin-for-apache-solr-lucene
+For more detail about the CTF plugin go to https://www.slideshare.net/pontneo/better-search-implementation-of-click-through-filter-as-a-query-parser-plugin-for-apache-solr-lucene
 
 SOME EXAMPLE CTF QUERIES (parameters are described below):
 ---------------------------------------------------------
@@ -57,10 +57,10 @@ REQUIREMENTS:
 ------------
 <table>
 <tr><td>1.</td><td> document core(s) with unique docIDs</td></tr>
-<tr><td>2.</td><td> a clicks core for storing user clicks (see attached schema.xml) with a minimum of following fields;</td></tr>
-<tr><td></td><td>	timestamp	- timestamp of user's click</td></tr>
-<tr><td></td><td>	fromDocID	- user's previous clicked docID in session (may be a null value where necessary)</td></tr>
-<tr><td></td><td>	toDocID		- user's current clicked docID</td></tr>
+<tr><td>2.</td><td> a clicks core for storing clicks (see attached schema.xml) with a minimum of following fields;</td></tr>
+<tr><td></td><td>	timestamp	- timestamp of click</td></tr>
+<tr><td></td><td>	fromDocID	- referrer docID (may be a null value where necessary)</td></tr>
+<tr><td></td><td>	toDocID		- destination docID</td></tr>
 <tr><td></td><td>	other fields (such as userID, usertype, user_interests, to_posn_in_list, user_query etc) are not required but are of course part of the point of using this plugin (see example queries above)</td></tr>
 </table>
 

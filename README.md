@@ -1,5 +1,5 @@
 # Solr-ctf-query-parser
-Reranks and expands Solr query returns using clickstream data, providing a flexible framework for sharing, personalisation, recommendations etc based directly on efficient implicit feedback.  Clickthroughfilter-x.x.x.jar runs the filter as a query parser plugin for Solr/Lucene.
+Reranks and expands Solr query returns using filtered clickstream data, providing a simple, flexible collaborative filtering framework.  Clickthroughfilter-x.x.x.jar runs the filter as a query parser plugin for Solr/Lucene.
 
 The filter samples click data (from a separate clicks core) for items returned by a query and uses it to
 
